@@ -70,10 +70,10 @@ background-image: linear-gradient(to bottom, #3b3d3f 0%, #48494b 100%);
 }
 /* Header */
 #head {
-	background: #181015 url( ../images/TRI.gif) no-repeat;
-	background-size: cover;
-	min-height: 520px;
-	text-align: center;
+	background: #181015 url( ../images/TRI.gif) no-repeat center fixed;
+	background-size:cover;
+	max-width:100%;
+   	height: auto%;
 	padding-top: 240px;
 	color: white;
 	font-family: "Open sans", Helvetica, Arial;
