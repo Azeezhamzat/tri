@@ -79,6 +79,31 @@ background-image: linear-gradient(to bottom, #3b3d3f 0%, #48494b 100%);
 	font-family: "Open sans", Helvetica, Arial;
 	font-weight: 300;
 }
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	#head {
+	  background-size: 100% 100%;
+	}
+  }
+  @media only screen and (max-width: 992px) {
+	/* For mobile phones: */
+	#head {
+	  background-size: 100% 100%;
+	}
+  }
+  @media only screen and (max-width: 1200px) {
+	/* For mobile phones: */
+	#head {
+	  background-size: 100% 100%;
+	}
+  }
+  @media only screen and (max-width: 600px) {
+	/* For mobile phones: */
+	#head {
+	  background-size: 100% 100%;
+	}
+  }
+
 #head.secondary {
 	height: 100px;
 	min-height: 100px;
