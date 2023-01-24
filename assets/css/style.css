@@ -61,8 +61,9 @@ element.style {
 	font-size: 18px;
 }
 .navbar-fixed-top, .navbar-fixed-bottom { 
-z-index: 9999;
+z-index: 1000;
 }
+
 .btn-action, .btn-primary {
 color: #FFEFD7;
 background-image: -webkit-linear-gradient(top, #07447c 0%, #383d41 100%);
@@ -86,12 +87,26 @@ background-image: linear-gradient(to bottom, #3b3d3f 0%, #48494b 100%);
 	  background-size: 100% 100%;
 	}
   }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	#head {
 	  background-size: 100% 100%;
 	}
   }
+ */
+@media only screen and (max-width: 767px) {
+  .navbar-collapse {
+    display: block !important;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+  }
+}
+
   @media only screen and (max-width: 992px) {
 	/* For mobile phones: */
 	#head {
