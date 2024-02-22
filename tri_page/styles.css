@@ -1,0 +1,895 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2; /* Background color */
+    color: #000000; /* Text color */
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000; /* Header background color */
+    color: #ffffff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #ffffff;
+}
+
+/* ... (your existing styles) ... */
+
+/* Display "Go to Top" button */
+.go-to-top {
+    display: none;
+}
+
+/* Active styles for the navigation menu */
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000; /* Set background color for the expanded menu */
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+}
+
+nav ul.active li {
+    margin-right: 0; /* Reset margin for centered menu items */
+}
+
+/* ... (rest of your styles) ... */
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1c4587; /* Hover color */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        background-color: #000000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        padding: 15px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5em;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu a:hover {
+        background-color: #1c4587;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .bar.active:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .bar.active:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar.active:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* Hero Section styles */
+.hero {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0; /* Adjust the padding for the banner's height */
+    text-align: center;
+    min-height: 100vh; /* Set minimum height to cover the entire screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .container {
+    max-width: 600px; /* Adjust the max-width based on your design */
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Highlight styles for collective genius */
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    /* color: #1c4587; */
+}
+
+
+.cta-button,
+.cta-button.secondary {
+    padding: 15px 30px;
+}
+.hero {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+.cta-button.secondary {
+    background-color: #1c4587;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button.secondary:hover {
+    background-color: #000000;
+}
+
+/* About Us Section styles */
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+}
+
+.image {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+}
+
+.inline-image {
+    float: right; /* or float: left; depending on where you want the image */
+    margin: 0 0 20px 20px; /* Adjust margin as needed */
+}
+
+.about-us {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text {
+    flex: 0 0 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 1.3em;
+    color: #333333;
+    line-height: 1.8;
+}
+
+.highlight-text {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: #1c4587; /* Adjusted to match the brand color */
+}
+
+.sub-text {
+    color: #555555;
+}
+
+/* Add this to your existing CSS */
+
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #1c4587; /* Adjusted to match the brand color */
+    border-left: 4px solid #1c4587; /* Left border for emphasis */
+    padding-left: 20px; /* Adjust the padding as needed */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.quote {
+    font-style: italic;
+    /* color: #1c4587; */
+    font-size: larger;
+}
+
+/* .inline-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+} */
+
+.image {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.brand-name {
+    color: #1c4587; /* Adjusted to match the brand color */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+/* Additional styling for the highlighted text within the paragraph */
+.text .highlight-text {
+    color: #1c4587;
+}
+
+/* Add this to your existing CSS */
+
+/* ... (previous CSS code) ... */
+
+/* Additional styling for the highlighted text within the paragraph */
+.text .highlight-text {
+    color: #1c4587;
+}
+
+/* Additional styling for text wrapping around the image */
+.inline-image {
+    max-width: 40%; /* Adjust the width as needed */
+    margin: 0 20px 20px 0; /* Adjust margin as needed */
+    float: left; /* Float the image to the left */
+}
+
+.inline-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Services Section styles */
+.services {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    display: inline-block; /* Add this line to make them display horizontally */
+    vertical-align: top; /* Align to the top */
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #1c4587;
+}
+
+.service p {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.service img {
+    width: 100%; /* Set the width to 100% for responsiveness */
+    height: 200px; /* Set the desired height for uniformity */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .service {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service {
+        width: calc(100% - 20px);
+    }
+}
+
+
+/* Case Studies Section styles */
+.case-studies {
+    padding: 100px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.case-studies .container {
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust the max-width as needed */
+}
+
+.case-studies h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+.case-study {
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 20px;
+    border: 1px solid #1c4587;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.case-study:hover {
+    transform: scale(1.05);
+}
+
+.case-study h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1c4587;
+}
+
+.case-study p {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.cta-button {
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+/* Additional styling for Case Studies Section */
+.summary-card {
+    display: none;
+    padding: 20px;
+    background-color: #1c4587;
+    color: #ffffff;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.case-study:hover .summary-card {
+    display: block;
+}
+
+/* Add hover effect for Read More button */
+.case-study:hover .cta-button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Adjustments for better readability */
+.summary-card p {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Add this CSS rule for mobile devices */
+@media only screen and (max-width: 767px) {
+    .summary-card {
+        overflow-y: auto;
+        max-height: 200px; /* Adjust the max-height as needed */
+    }
+}
+
+
+/* Contact Section styles */
+.contact-us {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Apply "Contact Us" style to both form and brand logo */
+.contact-us .form-and-details {
+    flex: 1;
+    max-width: 600px;
+}
+
+.contact-us .brand-logo {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    margin-right: 20px;
+}
+
+/* Adjust margin for the "Contact Us" heading */
+.contact-us h2 {
+    margin-bottom: 50px; /* Increase the margin to create more space */
+}
+
+/* Contact Form styles */
+.contact-us .contact-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contact-us .form-group {
+    margin-bottom: 30px; /* Increase the margin between form elements */
+}
+
+.contact-us label {
+    font-size: 1.2em;
+    color: #1c4587;
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: #000000;
+}
+
+/* Contact Details Section styles */
+.contact-us .contact-details {
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.contact-us .contact-details p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-us .contact-details p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-us .contact-details p strong {
+    color: #1c4587;
+    font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contact-us .brand-logo {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+}
+
+
+/* Blog Section styles */
+.blog {
+    padding: 100px 0;
+    text-align: center; /* Center align the content */
+    background-color: #ffffff;
+}
+
+.blog .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.article {
+    margin-bottom: 60px;
+    padding: 20px;
+    border: 1px solid #1c4587;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.article:hover {
+    transform: scale(1.05);
+}
+
+.article h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1c4587;
+}
+
+.article p {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+/* Add this style for the Read More button */
+.cta-button.secondary {
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button.secondary:hover {
+    background-color: #000000;
+}
+
+/* Button Section styles */
+/* Button Section styles */
+.explore-more {
+    text-align: center;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.explore-more .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.explore-more button {
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 15px 10px;
+    margin: 10px; /* Adjusted margin here */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.explore-more button:hover {
+    background-color: #000000;
+}
+
+.explore-more a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quick-links,
+.connect-with-us,
+.copyright {
+    flex: 1;
+}
+
+.quick-links p,
+.connect-with-us p,
+.copyright p {
+    margin: 10px 0;
+}
+
+.quick-links a,
+.connect-with-us a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.quick-links a:hover,
+.connect-with-us a:hover {
+    color: #f2f2f2;
+}
+
+/* Adjust position of the copyright */
+.copyright {
+    order: 3; /* Set order to 3 to move it to the end */
+}
+
+@media (max-width: 768px) {
+    .quick-links,
+    .connect-with-us,
+    .copyright {
+        flex: 100%;
+        order: initial;
+        text-align: center;
+    }
+}
+
+
+/* ... (previous CSS code) ... */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        list-style: none;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul.active li {
+        margin-right: 0; /* Reset margin for centered menu items */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #1c4587; /* Hover color */
+        color: #ffffff;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+    }
+}
+
+/* ... (rest of your styles) ... */
+
+.go-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1c4587;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-to-top:hover {
+    background-color: #000000;
+}
+
+/* ... (rest of your styles) ... */
