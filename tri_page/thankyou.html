@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empowering collective genius through innovative solutions and collaborative problem-solving.">
+    <meta name="keywords" content="collective intelligence, innovation, problem-solving, consultancy">
+    <meta name="author" content="The Rising Intel">
+    <meta property="og:title" content="The Rising Intel">
+    <meta property="og:description" content="Empowering collective genius through innovative solutions and collaborative problem-solving.">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <link rel="icon" type="image/png" href="tri_icon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Rising Intel</title>
+</head>
+
+<body>
+    <header>
+        <div class="container"> 
+            <div class="logo">
+                <i class="logo-text">therisingintel</i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://azeezhamzat.github.io/tri/tri_page/home#about">About</a></li>
+                    <li><a href="https://azeezhamzat.github.io/tri/tri_page/home#services">Services</a></li>
+                    <li><a href="https://azeezhamzat.github.io/tri/tri_page/home#case-studies">Case Studies</a></li>
+                    <li><a href="https://azeezhamzat.github.io/tri/tri_page/home#contact">Contact Us</a></li>
+                    <li><a href="https://azeezhamzat.github.io/tri/tri_page/home#blog">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thank You Section -->
+    <section class="thank-you" style="padding: 130px;"> <!-- Added padding-top -->
+        <div class="container">
+            <!-- Brand Logo -->
+            <div class="brand-logo">
+                <img src="about-image.jpg" alt="Our Brand Logo" style="border-radius: 10%; max-width: 100%;">
+            </div>
+            
+            <!-- Thank You Message -->
+            <div class="thank-you-message">
+                <h2>Thank You for Contacting Us!</h2>
+                <p>We appreciate your message and will get back to you as soon as possible.</p>
+                <p>In the meantime, feel free to explore more about our services and offerings.</p>
+                
+                <!-- Services Button -->
+                <a href="https://azeezhamzat.github.io/tri/tri_page/home#services" class="cta-button">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="quick-links">
+                <p>Quick Links:</p>
+                <p><a href="https://azeezhamzat.github.io/tri/tri_page/home">Home</a> | <a href="https://azeezhamzat.github.io/tri/tri_page/home#about">About Us</a> | <a href="https://azeezhamzat.github.io/tri/tri_page/home#services">Services</a> | <a href="https://azeezhamzat.github.io/tri/tri_page/home#case-studies">Case Studies</a> | <a href="https://azeezhamzat.github.io/tri/tri_page/home#contact">Contact Us</a> | <a href="https://azeezhamzat.github.io/tri/tri_page/home#blog">Blog</a></p>
+            </div>
+            <div class="connect-with-us">
+                <p>Connect With Us:</p>
+                <p><a href="https://www.linkedin.com/company/therisingintel/?viewAsMember=true"  target="_blank">LinkedIn</a> | <a href="#"  target="_blank">Twitter</a> | <a href="https://www.facebook.com/therisingintel"  target="_blank">Facebook</a> | <a href="#"  target="_blank">Instagram</a></p>
+            </div>
+            <div class="copyright">
+                <p>© 2024 The Rising Intel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Add your script tags and any other necessary scripts -->
+
+    <script>
+        // JavaScript for hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const menu = document.querySelector('nav ul');
+        const goToTopButton = document.querySelector('.go-to-top');
+    
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    
+        // Close menu when a navigation link is clicked
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                goToTopButton.style.display = 'block';
+            } else {
+                goToTopButton.style.display = 'none';
+            }
+        });
+    
+        goToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll event to handle header visibility
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+
+function showSummary(caseStudy) {
+    const summaryCard = caseStudy.querySelector('.summary-card');
+    summaryCard.classList.toggle('active');
+}
+
+
+
+    </script>
+</body>
+</html>
